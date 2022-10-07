@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: linear-gradient(to right top, #051937, #00273a, #003234, #223a2f, #3c4132);;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projefx.listviewController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="533.0" prefWidth="768.0" spacing="20.0">
+          <padding>
+              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+          </padding>
+          <children>
+            <AnchorPane prefWidth="728.0">
+               <children>
+                    <Button alignment="CENTER" layoutX="433.0" layoutY="20.0" onAction="#onRegisterButtonClick" prefWidth="230.0" style="-fx-background-color: #00CA96;" text="Add New Customer" underline="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                    <Button layoutX="433.0" layoutY="82.0" onAction="#onRemoveButtonClick" prefHeight="25.0" prefWidth="230.0" style="-fx-background-color: #B83154;" text="Remove a Customer" textAlignment="CENTER" underline="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button alignment="CENTER" layoutX="433.0" layoutY="146.0" onAction="#onEditButtonClick" prefWidth="230.0" style="-fx-background-color: #008898;" text="Edit a Customer" underline="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="91.0" layoutY="38.0" text="WELCOME !" textFill="WHITE">
+                     <font>
+                        <Font name="Candara" size="39.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="33.0" layoutY="100.0" text="Control Panel for Mighty Sport Center" textFill="WHITE">
+                     <font>
+                        <Font name="Microsoft YaHei" size="17.0" />
+                     </font>
+                  </Label>
+                  <Button layoutY="166.0" mnemonicParsing="false" onAction="#onRefreshButtonClick" prefHeight="30.0" prefWidth="115.0" style="-fx-background-color: #B1B038;" text="Refresh">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <TableView fx:id="dataTable" prefHeight="287.0" prefWidth="728.0">
+              <columns>
+                  <TableColumn fx:id="idcol" prefWidth="53.0" text="ID" />
+                <TableColumn fx:id="namecol" prefWidth="82.0" text="Name" />
+                <TableColumn fx:id="surnamecol" prefWidth="86.0" text="Surname" />
+                  <TableColumn fx:id="membershipcol" prefWidth="85.0" text="Membership" />
+                  <TableColumn fx:id="startdatecol" prefWidth="98.0" text="Start Date" />
+                  <TableColumn fx:id="expirationdatecol" prefWidth="124.0" text="Expiration Date" />
+                  <TableColumn fx:id="discountcol" prefWidth="88.0" text="Discount" />
+                  <TableColumn fx:id="totalPricecol" prefWidth="97.0" text="Total Price" />
+              </columns>
+            </TableView>
+            <Label text="Search" />
+          </children>
+      </VBox>
+      <TextField fx:id="searchField" />
+   </children>
+</AnchorPane>
