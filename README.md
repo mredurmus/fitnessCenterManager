@@ -133,10 +133,3 @@ gerekmektedir.
 Yönetici yeni bir müşteri kaydı eklediğinde , var olan bir kaydı sildiğinde veya düzenlediğinde
 ana ekranda gözükmesi için “Refresh” butonuna tıklayarak listeyi güncellemelidir.
 
-[Önemli Not]
-
-Bu program girilen verileri veritabanında saklamak için MySQL kullanır. Bu MySQL localhost
-olarak çalıştığından programın çalıştığı bilgisayarda veritabanının entegre edilmesi
-gerekmektedir.
-
-Database için kullanılan id,password : root,q1w2e3r1
